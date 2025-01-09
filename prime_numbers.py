@@ -85,9 +85,9 @@ def build_graphic(x: list, y: list, x_prime: list, y_prime: list, x_simple: list
     plt.grid(which='minor', linestyle=':')  # enable minor grid                   
     # --------------------------------------
     # adding our data on graphic
-    plt.plot(x, y, 'ok')                    # number without anything special signed with balck dots
-    plt.plot(x_prime, y_prime, 'or')        # prime number signed with red dots
-    plt.plot(x_simple, y_simple, 'og')      # simple number signed with green dots
+    plt.plot(x, y, 'ok', label='Standart')                # standart number signed with balck dots
+    plt.plot(x_prime, y_prime, 'or', label='Prime')       # prime number signed with red dots
+    plt.plot(x_simple, y_simple, 'og', label='Simple')    # simple number signed with green dots
     # -----------------------------------------------------------------------------------------------
     # --------------------------------------
     # adding some custom things on graphic

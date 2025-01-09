@@ -82,14 +82,22 @@ def build_graphic(x: list, y: list, x_prime: list, y_prime: list, x_simple: list
     ax.patch.set_facecolor('grey')          # set background color of graphic
     ax.patch.set_alpha(0.5)                 # set background color transparency
     plt.grid(which='major')                 # enable major grid
-    plt.grid(which='minor', linestyle=':')  # enable minor grid
-    plt.semilogy()                          # enable logarithmic scale
+    plt.grid(which='minor', linestyle=':')  # enable minor grid                   
     # --------------------------------------
     # adding our data on graphic
-    plt.plot(x, y, 'ok')                     # number without anything special signed with balck dots
+    plt.plot(x, y, 'ok')                    # number without anything special signed with balck dots
     plt.plot(x_prime, y_prime, 'or')        # prime number signed with red dots
     plt.plot(x_simple, y_simple, 'og')      # simple number signed with green dots
     # -----------------------------------------------------------------------------------------------
+    # --------------------------------------
+    # adding some custom things on graphic
+    plt.title('Types of numbers', fontsize = 40)    # adding title on our graphic
+    plt.xlabel('Natural numbers', fontsize = 30)    # adding subscription to X axis
+    plt.ylabel('Sum of divisors of number',         
+               fontsize = 30)                       # adding subscription to Y axis
+    plt.semilogy()                                  # enable logarithmic scale
+    plt.legend (title='Types of numbers', 
+                fontsize = 20, title_fontsize = 24) # adding legend on our graphic
 
     # show the result
     plt.show()
